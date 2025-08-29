@@ -2,10 +2,44 @@
 #define D_A_KN_H
 
 #include "f_op/f_op_actor.h"
+#include "d/d_bg_s_acch.h"
+#include "d/d_particle.h"
+#include "m_Do/m_Do_hostIO.h"
 
-class kn_class : public fopAc_ac_c {
-public:
-    /* Place member variables here */
-};
+struct kn_class {
+    /* 0x000 */ fopAc_ac_c actor;
+    /* 0x290 */ u8 field_0x290[0x2AC - 0x290];
+    /* 0x2AC */ request_of_phase_process_class mPhase;
+    /* 0x2B4 */ u8 field_0x2B4;
+    /* 0x2B5 */ u8 field_0x2B5;
+    /* 0x2B6 */ u8 field_0x2B6[0x2B8 - 0x2B6];
+    /* 0x2B8 */ mDoExt_McaMorf* mpMorf;
+    /* 0x2BC */ u8 field_0x2BC;
+    /* 0x2BD */ u8 field_0x2BD;
+    /* 0x2BE */ bool field_0x2BE;
+    /* 0x2BF */ bool field_0x2BF;
+    /* 0x2C0 */ bool field_0x2C0;
+    /* 0x2C1 */ u8 field_0x2C1;
+    /* 0x2C2 */ s16 field_0x2C2[4];
+    /* 0x2CA */ s16 field_0x2CA;
+    /* 0x2CC */ f32 field_0x2CC;
+    /* 0x2D0 */ s16 field_0x2D0;
+    /* 0x2D2 */ s16 field_0x2D2;
+    /* 0x2D4 */ s16 field_0x2D4;
+    /* 0x2D6 */ u8 field_0x2D6[0x2DC - 0x2D6];
+    /* 0x2DC */ f32 field_0x2DC;
+    /* 0x2E0 */ f32 field_0x2E0;
+    /* 0x2E4 */ f32 field_0x2E4;
+    /* 0x2E8 */ f32 field_0x2E8;
+    /* 0x2EC */ cXyz field_0x2EC;
+    /* 0x2F8 */ csXyz field_0x2F8;
+    /* 0x2FE */ u8 field_0x2FE[0x300 - 0x2FE];
+    /* 0x300 */ cXyz field_0x300;
+    /* 0x30C */ u8 field_0x30C[0x314 - 0x30C];
+    /* 0x314 */ dPa_smokeEcallBack field_0x314;
+    /* 0x334 */ JPABaseEmitter* field_0x334;
+    /* 0x338 */ dBgS_AcchCir field_0x338;
+    /* 0x378 */ dBgS_ObjAcch field_0x378;
+};  // Size: 0x53C
 
 #endif /* D_A_KN_H */
